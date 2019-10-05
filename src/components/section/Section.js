@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Section = ({title, children}) => {
+const Section = ({id, title, children}) => {
 
     return (
-        <div className="section">
+        <div id={id} className="section">
             <h1>{title}</h1>
             <p>
                 {children}
