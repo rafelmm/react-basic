@@ -1,25 +1,44 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
+
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import Menu from './menu/Menu';
+
 import './App.css';
 
+function Backup() {
+  return (
+  <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
+    <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+    <Navbar.Collapse id="responsive-navbar-nav">
+      <Nav className="mr-auto">
+        <Nav.Link href="#about">Sobre mi</Nav.Link>
+        <Nav.Link href="#contact">Contacto</Nav.Link>
+      </Nav>
+    </Navbar.Collapse>
+
+  </Navbar>
+  );
+}
 
 function App() {
+  const menuItems = [
+    {
+      href: '#about',
+      text:'Sobre mi'
+    },
+    {
+      href: '#career',
+      text:'Experiencia'
+    },
+    {
+      href: '#contact',
+      text:'Contacto'
+    }
+  ];
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
-        <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="#about">Sobre mi</Nav.Link>
-            <Nav.Link href="#contact">Contacto</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-
-      </Navbar>
+      <Menu fixed='top' menuItems={menuItems}/>
       <div className="welcome-container">
         <div className="welcome-message">Hola, ¿quieres conocerme?</div>
         <div className="welcome-name">RAFEL MORMENEO</div>
