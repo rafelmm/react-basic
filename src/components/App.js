@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Menu from './menu/Menu';
+import Section from './section/Section';
 
 import './App.css';
 
@@ -46,9 +47,8 @@ function App() {
       </div>
       
       <div className="main-container">
-        <div id="about" className="section">
-          <h1>Este soy yo</h1>
-          <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+        <Section id="about" title="Este soy yo">
+          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
           Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
           Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
           Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
@@ -61,11 +61,9 @@ function App() {
           Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
           Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
           Lorem ipsum 
-          </p>
-        </div>
-        <div id="contact" className="section">
-          <h1>Este soy yo</h1>
-          <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+        </Section>
+        <Section id="career" title="Mi experiencia">
+          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
           Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
           Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
           Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
@@ -78,10 +76,11 @@ function App() {
           Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
           Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
           Lorem ipsum 
-          </p>
-        </div>
+        </Section>
+        <Section id="contact" title="Contacta conmigo">
+
+        </Section>
       </div>
-     
     </>
   );
 }
