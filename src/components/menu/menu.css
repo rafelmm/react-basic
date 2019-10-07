@@ -51,21 +51,33 @@
     display:flex;
     flex-direction:column;
     list-style: none;
-    background-color:#333;
+    background-color:rgb(240,240,240);
     width:100%;
 }
 
 .menu-items-container>ul>li {
     text-align: center;
-    padding: 5px 0;
 }
 .menu-items-container>ul>li:first-child{
     padding-top: 15px;
 }
-.menu-items-container>ul>li:last-child{
-    padding-bottom: 10px;
+.menu-items-container>ul>li:last-child>a:not([href]):not([tabindex]){
+    border-bottom:0;
 }
-.menu-items-container>ul>li>a{
-    color:white;
+
+.menu-items-container a:not([href]):not([tabindex]){
+    color:rgb(50,50,50);
     text-decoration: none;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(50,50,50);
+    min-width:40%;
+    display:inline-block;
+    padding:5px;
 }
+
+.menu-items-container a:hover:not([href]):not([tabindex]),
+.menu-items-container a.active:not([href]):not([tabindex]){
+    color:rgb(50,50,50);
+    font-weight: 600;
+}
+
