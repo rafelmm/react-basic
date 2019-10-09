@@ -1,6 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-
+import './Section.css';
 const Section = ({id, title, children, scrollInTop, enableFade}) => {
     const duration = enableFade?1000:0;
     return (
