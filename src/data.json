@@ -1,0 +1,38 @@
+  {
+    "sections":
+    [
+        {
+            "id": "about",
+            "menuTitle":"Sobre mi",
+            "title":"Este soy yo",
+            "content": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsu"
+        },
+        {
+            "id": "career",
+            "menuTitle": "Experiencia",
+            "title":"Que he estado haciendo",
+            "content": ["Smart Motors - Enero 2011 - Actualidad ", 
+                "2011-2014: Ingeniero Electrónico. Desarrollo de Hardware y Firmware. ",
+                "Adquisición de señales y procesado de imagen",
+                "2014-Actualidad: Ingeniero Software. Desarrollo aplicaciones web. ",
+                "Tecs java, struts, hibernate, node.js, javascript, html5, css3, jquery, node-red, ",
+                "react.js, python, c++/cli .net, vb, macros excel, appscript (google),   ",
+                "Git, svn, tomcat, apache, express",
+                "2017-Actualidad: Coordinador de Proyectos. Negociación, gestión de equipos, gestión de tiempos, ",
+                "planificación, satisfacción del cliente, honestidad, metodología Agile, Scrum.",
+                "Indra - Octubre 2010 - Diciembre 2010",
+                "SAP-CRM: Cuatrecasas",
+                "Indra - Octubre 2007 - Abril 2010",
+                "ABAP MM, SD, WM, FI. Forms, smartforms, adobeforms, custom programs, bapi, badi, edi. ",
+                "Camper, Liceu, Catalonia, Cuatrecasas",
+                "Cemex - Verano 2006",
+                "Becario. Convenio Universidad. Mantenimiento eléctrico y dibujo de planos en Autocad"]
+        },
+        {
+            "id": "contact",
+            "menuTitle":"Contacto",
+            "title":"Contacta conmigo",
+            "content": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsuLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsu"
+        }
+    ]
+}

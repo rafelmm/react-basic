@@ -5,21 +5,9 @@ import Section from './section/Section';
 
 import './App.css';
 
+
 function App() {
-  const menuItems = [
-    {
-      target: 'about',
-      text:'Sobre mi'
-    },
-    {
-      target: 'career',
-      text:'Experiencia'
-    },
-    {
-      target: 'contact',
-      text:'Contacto'
-    }
-  ];
+  const data = require('../data.json');
   const [menuActive, setMenuActive] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [enableFade, setEnableFade] = useState({timestamp: new Date().getTime(), value: true});
@@ -50,7 +38,7 @@ function App() {
 
   return (
     <>
-      <Menu menuItems={menuItems} menuActive={menuActive} onMenuClick={handleMenuClick}/>
+      <Menu menuItems={data.sections} menuActive={menuActive} onMenuClick={handleMenuClick}/>
       <div className="welcome-container">
         <div className="welcome-message">Hola, ¿quieres conocerme?</div>
         <div className="welcome-name">RAFEL MORMENEO</div>
@@ -58,56 +46,14 @@ function App() {
       </div>
       
       <div className="main-container">
-        <Element name="about">
-          <Section id="about" title="Este soy yo" scrollInTop={scrollY===0} enableFade={enableFade.value}>
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum 
-          </Section>
-        </Element>
-        <Element name="career">
-          <Section id="career" title="Mi experiencia" scrollInTop={scrollY===0} enableFade={enableFade.value}>
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum 
-          </Section>
-        </Element>
-        <Element name="contact">
-          <Section id="contact" title="Contacta conmigo" scrollInTop={scrollY===0} enableFade={enableFade.value}>
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-          </Section>
-        </Element>
+        {data.sections.map((section)=>{return (
+          <Element name={section.id}>
+            <Section id={section.id} title={section.title} scrollInTop={scrollY===0} enableFade={enableFade.value}>
+              {section.content}
+            </Section>
+          </Element>
+          );
+        })}
       </div>
     </>
   );

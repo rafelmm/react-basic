@@ -9,16 +9,16 @@ const Menu = ({menuItems, menuActive, onMenuClick}) => {
             <div className={(menuActive?"active ":"") + "menu-items-container"}>
                 <ul>
                     {menuItems.map(i => 
-                        <li key={i.target.toString()}>
+                        <li key={i.id.toString()}>
                             <Link 
                                 activeClass="active"
-                                to={i.target} 
+                                to={i.id} 
                                 spy={true}
                                 smooth={true}
                                 hashSpy={true}
                                 duration={500} 
                             >
-                                {i.text}
+                                {i.menuTitle}
                             </Link>
                         </li>)}
                 </ul>
